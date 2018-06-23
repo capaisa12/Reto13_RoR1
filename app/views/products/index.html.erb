@@ -15,7 +15,7 @@
         <td><%= product.name %></td>
         <td><%= product.price %></td>
         <td><% product.categories.each do |category| %>
-                <%= category.name %> <% end %></td>
+                -<%= category.name %></br> <% end %></td>
         </tr>
     <% end %>
     </table>
