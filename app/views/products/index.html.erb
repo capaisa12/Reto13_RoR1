@@ -8,6 +8,7 @@
         <th>Nombre</th>
         <th>Precio</th>
         <th>Categorias</th>
+        <th>Acciones</th>
     </tr>
     <% @products.each do |product| %>
         <tr>
@@ -15,7 +16,8 @@
         <td><%= product.name %></td>
         <td><%= product.price %></td>
         <td><% product.categories.each do |category| %>
-                -<%= category.name %></br> <% end %></td>
+                -<%= category.name %></br><% end %></td>        
+        <td><%= link_to "Editar", edit_product_path(product) %></td>
         </tr>
     <% end %>
     </table>
